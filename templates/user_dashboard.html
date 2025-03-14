@@ -1,0 +1,33 @@
+{% extends "user_layout.html" %}
+{% block content %}
+    <div class="container">
+        <h3 class="center">Available Quizzes</h3>
+        {% if subjects %}
+            <div class="row">
+                {% for subject in subjects %}
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ subject.name }}</h5>
+                                {% for chapter in subject.chapters %}
+                                    <h6>{{ chapter.name }}</h6>
+                                    {% for quiz in chapter.quizzes %}
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <h6 class="card-title">{{ quiz.name }}</h6>
+                                                <p class="card-text">Date: {{ quiz.date_of_quiz }} | Duration: {{ quiz.time_duration }}</p>
+                                                <a href="/quiz/{{quiz.id}}/{{id}}" class="btn btn-primary">Attempt Quiz</a>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h4 class="center">No quizzes available.</h4>
+        {% endif %}
+    </div>
+{% endblock %}
