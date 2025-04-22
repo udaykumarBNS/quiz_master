@@ -1,29 +1,25 @@
-# Quiz Master
 
-Quiz Master is a multi-user exam preparation app with two roles: **Admin** and **User**. Admins manage subjects, chapters, quizzes, and questions, while Users can attempt quizzes and view scores.
 
----
-
-```markdown
+```
 # 🧠 Quiz Master - Exam Preparation Web App
 
-**Quiz Master** is a multi-user quiz management web application that helps students prepare for exams through topic-based quizzes. Admins can create, edit, and manage quizzes, while users can register, take quizzes, and track their performance.
+**Quiz Master** is a multi-user web application that allows users to practice quizzes for exam preparation. It includes user and admin roles, with features for quiz creation, participation, and performance tracking. Built with Flask, SQLite, and Jinja2, it offers a smooth and intuitive quiz-taking experience.
 
 ## 🚀 Features
 
-### 👤 User Features
-- User registration and login
-- View available quizzes by category or topic
+### 👤 User Functionality
+- Register and log in securely
+- Browse available quizzes by category
 - Attempt quizzes and get instant scores
-- View quiz history and performance
+- View past attempts and performance history
 
-### 🛠️ Admin Features
+### 🔧 Admin Functionality
 - Secure admin login
-- Create, update, and delete quizzes
-- Add/edit questions and answers
-- View user attempts and scores
+- Add, edit, and delete quizzes
+- Manage questions and answer options
+- View user scores and quiz participation
 
-## 🧱 Tech Stack
+## 🛠️ Tech Stack
 
 | Layer         | Technology Used      |
 |---------------|----------------------|
@@ -33,18 +29,19 @@ Quiz Master is a multi-user exam preparation app with two roles: **Admin** and *
 | Templating    | Jinja2               |
 | IDE           | Visual Studio Code   |
 
-## 🗃️ Database Structure
+## 🗃️ Database Schema
 
 - **User Table**: `id`, `username`, `email`, `password`, `role`
 - **Quiz Table**: `id`, `title`, `category`, `total_questions`
-- **Question Table**: `id`, `quiz_id`, `question_text`, `option_a/b/c/d`, `correct_option`
+- **Question Table**: `id`, `quiz_id`, `question_text`, `option_a`, `option_b`, `option_c`, `option_d`, `correct_option`
 - **Attempt Table**: `id`, `user_id`, `quiz_id`, `score`, `timestamp`
+
 ```
 ## 🧪 How to Run Locally
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/udaykumarBNS/quiz_master.git
+   git clone https://github.com/your-username/quiz-master.git
    cd quiz-master
    ```
 
@@ -54,7 +51,7 @@ Quiz Master is a multi-user exam preparation app with two roles: **Admin** and *
    source venv/bin/activate   # On Windows: venv\Scripts\activate
    ```
 
-3. **Install Requirements**
+3. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
@@ -64,7 +61,7 @@ Quiz Master is a multi-user exam preparation app with two roles: **Admin** and *
    python app.py
    ```
 
-5. **Open in Browser**
+5. **Visit in Browser**
    ```
    http://localhost:5000
    ```
@@ -75,11 +72,9 @@ Quiz Master is a multi-user exam preparation app with two roles: **Admin** and *
 quiz-master/
 │
 ├── static/             # CSS, images
-├── templates/          # HTML templates (Jinja2)
-├── app.py              # Main Flask application
+├── templates/          # HTML (Jinja2) templates
+├── app.py              # Main Flask app
 ├── models.py           # SQLAlchemy models
 ├── requirements.txt    # Project dependencies
 └── README.md
 ```
-
-
