@@ -39,12 +39,12 @@ Quiz Master is a multi-user exam preparation app with two roles: **Admin** and *
 - **Quiz Table**: `id`, `title`, `category`, `total_questions`
 - **Question Table**: `id`, `quiz_id`, `question_text`, `option_a/b/c/d`, `correct_option`
 - **Attempt Table**: `id`, `user_id`, `quiz_id`, `score`, `timestamp`
-
+```
 ## 🧪 How to Run Locally
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/quiz-master.git
+   git clone https://github.com/udaykumarBNS/quiz_master.git
    cd quiz-master
    ```
 
