@@ -41,7 +41,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/quiz-master.git
+   git clone https://github.com/udaykumarBNS/quiz_master.git
    cd quiz-master
    ```
 
